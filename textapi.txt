@@ -1,0 +1,10 @@
+dollar history :
+https://www.exchangerate-api.com/docs/historical-data-requests
+
+exhangerate-api:
+https://app.exchangerate-api.com/dashboard
+apikey:https://v6.exchangerate-api.com/v6/5451fc9b1c7bc3c2ebcf8556/latest/USD
+
+
+link img:
+https://dribbble.com/shots/25111306-swiftbank-AI-Digital-Banking-Payment-App-Exchange-Rate-Chart
