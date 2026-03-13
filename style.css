@@ -14,3 +14,12 @@
 .animate-blink-scale {
   animation: blink-scale 1s infinite;
 }
+
+/* إخفاء scrollbar في جميع المتصفحات */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,87 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="./img/news.png">
-    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/news.png" />
+    <link rel="stylesheet" href="./style.css" />
     <title>News Site</title>
-</head>
+  </head>
 
-<body class="relative">
+  <body class="relative">
     <!-- Navbar -->
     <nav class="bg-gray-900 text-white relative">
-        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-            <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <img src="./img/news.png" alt="logo news site" class="w-10 h-10">
-                <h1 class="font-bold text-lg cursor-pointer"><a href="./index.html">News Site</a></h1>
-            </div>
-
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex gap-6">
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="./index.html">Home</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#">Matches</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#">Statices</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#">Table</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i> Live</a>
-                </li>
-            </ul>
-
-            <!-- Right Icons -->
-            <div class="flex gap-4 items-center">
-                <!-- Search Icon -->
-                <i class="fa-solid fa-magnifying-glass cursor-pointer text-lg" id="searchBtn"></i>
-
-                <!-- Menu Bar for Mobile -->
-                <i class="fa-solid fa-bars cursor-pointer md:hidden text-xl" id="menuBtn"></i>
-            </div>
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="./img/news.png" alt="logo news site" class="w-10 h-10" />
+          <h1 class="font-bold text-lg cursor-pointer">
+            <a href="./index.html">News Site</a>
+          </h1>
         </div>
 
-        <!-- Mobile Menu -->
-        <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
-            <ul class="flex flex-col p-4 gap-3">
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="./index.html">Home</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#">Matches</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#">Statices</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#">Table</a>
-                </li>
-                <li
-                    class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-                    <a href="#"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i> Live</a>
-                </li>
-            </ul>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Matches</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Table</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#"
+              ><i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live</a
+            >
+          </li>
+        </ul>
+
+        <!-- Right Icons -->
+        <div class="flex gap-4 items-center">
+          <!-- Search Icon -->
+          <i
+            class="fa-solid fa-magnifying-glass cursor-pointer text-lg"
+            id="searchBtn"
+          ></i>
+
+          <!-- Menu Bar for Mobile -->
+          <i
+            class="fa-solid fa-bars cursor-pointer md:hidden text-xl"
+            id="menuBtn"
+          ></i>
         </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
+        <ul class="flex flex-col p-4 gap-3">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./index.html">Home</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Matches</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Table</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#"
+              ><i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Animated Search Bar -->
@@ -91,30 +122,80 @@
             class="w-full px-4 py-2 rounded-lg outline-none text-black focus:ring-2 focus:ring-blue-500">
     </div> -->
 
-    <div class="container mx-auto flex flex-col md:flex-row gap-4">
+    <div class=" mx-auto flex flex-col-reverse md:flex-row gap-4">
+      <!-- الأحمر -->
+      <div class="w-full md:w-3/4 bg-red-500 p-4">
+        <h2 class="font-bold text-white mb-2">Main Content</h2>
+        <p class="text-white"></p>
+      </div>
 
-        <!-- الأحمر -->
-        <div class="w-full md:w-3/4 bg-red-500 p-4">
-            <h2 class="font-bold text-white mb-2">Main Content</h2>
-            <p class="text-white"></p>
-        </div>
-
-        <!-- الأزرق: Cards -->
-        <div class="w-full md:w-1/4 bg-blue-500 p-4">
-            <h2 class="font-bold text-white mb-2">Cards</h2>
-            <div id="cardsContainer"
-                class="flex flex-col md:flex-col gap-4 md:overflow-visible overflow-x-auto md:overflow-y-auto whitespace-nowrap md:whitespace-normal">
-                <div class="min-w-[150px] h-32 bg-white rounded-lg flex items-center justify-center">Card 1</div>
-                <div class="min-w-[150px] h-32 bg-white rounded-lg flex items-center justify-center">Card 2</div>
-                <div class="min-w-[150px] h-32 bg-white rounded-lg flex items-center justify-center">Card 3</div>
-                <div class="min-w-[150px] h-32 bg-white rounded-lg flex items-center justify-center">Card 4</div>
-                <div class="min-w-[150px] h-32 bg-white rounded-lg flex items-center justify-center">Card 5</div>
+      <!-- الأزرق: Cards -->
+      <div class="w-full md:w-1/4 bg-blue-500 p-4">
+        <h2 class="font-bold text-white mb-2">Cards</h2>
+        <div
+          id="cardsContainer"
+          class="flex md:flex-col gap-4 overflow-x-auto md:overflow-x-visible overflow-y-hidden md:overflow-y-auto whitespace-nowrap md:whitespace-normal scrollbar-hide"
+        >
+          <!-- كارد الطقس -->
+          <div
+            class="card min-w-[180px] h-48 bg-white/10 rounded-xl shadow-lg flex flex-col justify-between p-4 text-white overflow-hidden"
+          >
+            <!-- Header: City & Time -->
+            <div class="flex flex-row justify-between items-center w-full">
+              <h2 id="city" class="text-sm font-semibold truncate">Cairo</h2>
+              <p id="time" class="text-xs truncate">09:30</p>
             </div>
-        </div>
 
+            <!-- Weather Icon -->
+            <div class="flex items-center justify-center my-2">
+              <img
+                id="weatherIcon"
+                class="w-16 h-16"
+                src="https://openweathermap.org/img/wn/01d@2x.png"
+                alt="weather icon"
+              />
+            </div>
+
+            <!-- Weather Description & Temp -->
+            <div class="flex flex-col items-center">
+              <p id="temp" class="text-3xl font-bold mt-2">20°</p>
+              <p id="weatherDesc" class="text-sm mt-1 capitalize truncate">
+                Mist
+              </p>
+            </div>
+
+            <!-- Footer: AQI & Temp Range -->
+            <div class="flex justify-between text-xs mt-2 w-full">
+              <p id="aqi" class="truncate">AQI 75</p>
+              <p id="tempRange" class="truncate">15°-24°</p>
+            </div>
+          </div>
+
+          <!-- باقي الكاردات -->
+          <div
+            class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"
+          >
+            Card 2
+          </div>
+          <div
+            class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"
+          >
+            Card 3
+          </div>
+          <div
+            class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"
+          >
+            Card 4
+          </div>
+          <div
+            class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"
+          >
+            Card 5
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="./script.js"></script>
-</body>
-
+    <script type="module" src="./script.js"></script>
+  </body>
 </html>
