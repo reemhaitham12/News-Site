@@ -1,4 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes blink-scale {
+
   0%,
   100% {
     opacity: 1;
@@ -19,7 +24,10 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }

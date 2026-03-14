@@ -45,7 +45,7 @@
         </li>
         <li
           class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
+          <a href="#LiveServer"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
             Live</a>
         </li>
       </ul>
@@ -81,7 +81,7 @@
         </li>
         <li
           class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
+          <a href="#LiveServer"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale" id="liveDot"></i>
             Live</a>
         </li>
       </ul>
@@ -99,13 +99,12 @@
     </div>
 
     <!-- الأزرق: Cards -->
-    <div class="w-full md:w-1/4 bg-blue-500 p-4">
-      <h2 class="font-bold text-white mb-2">Cards</h2>
+    <div class="w-full md:w-1/4 bg-blue-200 p-4">
       <div id="cardsContainer"
         class="flex flex-col md:flex-col gap-4 overflow-x-visible md:overflow-x-auto overflow-y-visible md:overflow-y-hidden whitespace-normal md:whitespace-nowrap scrollbar-hide">
         <!-- Weather card-->
         <div
-          class="card min-w-[180px] h-50 bg-white/10 rounded-xl shadow-lg flex flex-col justify-between p-4  overflow-hidden">
+          class="card min-w-[180px] h-50 bg-white  rounded-xl shadow-lg flex flex-col justify-between p-4  overflow-hidden">
           <!-- Header: City & Time -->
           <div class="flex flex-row justify-between items-center w-full">
             <h2 id="city" class="text-lg font-semibold truncate"></h2>
@@ -166,12 +165,16 @@
             </div>
           </div>
         </div>
-        <div class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4">
-          Card 3
-        </div>
-        <div class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4">
-          Card 4
-        </div>
+
+
+        
+        <!-- <div class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"> -->
+          <div id="LiveServer">
+            <div id="liveMatchesContainer" class="flex gap-4 flex-wrap">
+            <!-- هنا هتظهر كل الـ Cards تلقائيًا من JS -->
+          </div>
+          </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
