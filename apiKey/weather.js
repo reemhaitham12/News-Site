@@ -2,7 +2,7 @@ import { API } from "../config.js";
 
 export async function getWeather(city) {
   try {
-    // عرض Loading مؤقت أثناء جلب البيانات
+
     document.getElementById("city").innerText = "Loading...";
     document.getElementById("temp").innerText = "--°C";
     document.getElementById("weatherDesc").innerText = "";
@@ -18,17 +18,16 @@ export async function getWeather(city) {
 
     const data = await response.json();
 
-    // تحديث عناصر الواجهة
     document.getElementById("city").innerText = data.name;
     document.getElementById("temp").innerText = Math.round(data.main.temp) + "°C";
     document.getElementById("weatherDesc").innerText = data.weather[0].main;
 
-    // أيقونة الطقس
+
     const icon = data.weather[0].icon;
     document.getElementById("weatherIcon").src =
       `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-    // الوقت الحالي
+
     const now = new Date();
     document.getElementById("time").innerText = now.toLocaleTimeString([], {
       hour: "2-digit",
