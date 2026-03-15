@@ -1,4 +1,4 @@
-import { API } from "../config.js";
+import { API } from "./config.js";
 
 export let ratesData = { USD: 1, SAR: 3.75, EGP: 52.3937 };
 

@@ -8,3 +8,14 @@ apikey:https://v6.exchangerate-api.com/v6/5451fc9b1c7bc3c2ebcf8556/latest/USD
 
 link img:
 https://dribbble.com/shots/25111306-swiftbank-AI-Digital-Banking-Payment-App-Exchange-Rate-Chart
+
+
+
+Weather:
+https://openweathermap.org
+News:
+https://gnews.io
+Sports Data:
+https://allsportsapi.com
+Currency exchange rates:
+https://exchangerate-api.com

@@ -1,4 +1,4 @@
-import { API } from "../config.js";
+import { API } from "./config.js";
 
 export async function fetchLiveMatches() {
     const res = await fetch(`${API.live.url}/?met=Livescore&APIkey=${API.live.key}`);
@@ -27,7 +27,7 @@ export async function fetchLiveMatches() {
 export function getCurrentlyLiveMatches(matches) {
 
     const now = new Date();
-    const today = now.toISOString().split("T")[0]; // تاريخ اليوم
+    const today = now.toISOString().split("T")[0]; 
 
     return matches.filter(match => {
 

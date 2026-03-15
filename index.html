@@ -33,6 +33,10 @@
         </li>
         <li
           class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+          <a href="./Html/News.html">News</a>
+        </li>
+        <li
+          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
           <a href="#">Matches</a>
         </li>
         <li
@@ -52,9 +56,6 @@
 
       <!-- Right Icons -->
       <div class="flex gap-4 items-center">
-
-
-
         <!-- Menu Bar for Mobile -->
         <i class="fa-solid fa-bars cursor-pointer md:hidden text-xl" id="menuBtn"></i>
       </div>
@@ -66,6 +67,10 @@
         <li
           class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
           <a href="./index.html">Home</a>
+        </li>
+        <li
+          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+          <a href="./Html/News.html">News</a>
         </li>
         <li
           class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
@@ -81,7 +86,7 @@
         </li>
         <li
           class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#LiveServer"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale" id="liveDot"></i>
+          <a href="#LiveServer"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
             Live</a>
         </li>
       </ul>
@@ -91,15 +96,233 @@
 
 
   <div class=" mx-auto flex flex-col-reverse md:flex-row gap-4">
-    <!-- الأحمر -->
-    <div class="w-full md:w-3/4 bg-red-500 p-4">
-      <h2 class="font-bold text-white mb-2">Main Content</h2>
+    <!-- Cards red -->
+    <div class="w-full md:w-3/4 bg-gray-100 p-4">
+      <!-- desktop -->
+      <div class="nav flex items-center justify-between gap-4">
+        <h2 class="font-bold text-black text-3xl">
+          <a href="./Html/News.html?category=all">News</a>
+        </h2>
 
-      <p class="text-white"></p>
+        <ul class="hidden md:flex gap-3 text-md font-medium mx-auto flex-wrap">
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=all">All</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=world">World</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=business">Business</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=technology">Technology</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=entertainment">Entertainment</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=sport">Sport</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=science">Science</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=health">Health</a>
+          </li>
+          
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=travel">Travel</a>
+          </li>
+        </ul>
+
+        <div class="flex items-center ml-auto md:hidden">
+          <i class="fa-solid fa-bars cursor-pointer text-xl" id="newsBtn"></i>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="hidden md:hidden bg-gray-100" id="newsMenu">
+        <ul class="flex flex-col p-4 gap-3">
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=all">All</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=world">World</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=business">Business</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=technology">Technology</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=entertainment">Entertainment</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=sport">Sport</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=science">Science</a>
+          </li>
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=health">Health</a>
+          </li>
+          
+          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Html/News.html?category=travel">Travel</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- World -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">World</h2>
+          <a href="./Html/News.html?category=world" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="worldFeatured" class="lg:col-span-2"></div>
+          <div id="worldSide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="worldGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
+      <!-- Business -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Business</h2>
+          <a href="./Html/News.html?category=business" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="businessFeatured" class="lg:col-span-2"></div>
+          <div id="businessSide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="businessGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
+      <!-- TECHNOLOGY -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Technology</h2>
+          <a href="./Html/News.html?category=technology" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="technologyFeatured" class="lg:col-span-2"></div>
+          <div id="technologySide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="technologyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
+      <!-- Entertainment -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Entertainment</h2>
+          <a href="./Html/News.html?category=entertainment" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="entertainmentFeatured" class="lg:col-span-2"></div>
+          <div id="entertainmentSide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="entertainmentGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
+      <!-- SPORT -->
+      <div class="mt-10">
+
+        <!-- title -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Sport</h2>
+
+          <a href="./Html/News.html?category=sport" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <!-- news layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+          <!-- Featured News -->
+          <div id="featuredNews" class="lg:col-span-2"></div>
+
+          <!-- Side News -->
+          <div id="sideNews" class="flex flex-col gap-4"></div>
+
+        </div>
+
+        <!-- Bottom News -->
+        <div id="gridNews" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        </div>
+
+      </div>
+
+
+      <!-- science -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Science</h2>
+          <a href="./Html/News.html?category=science" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="scienceFeatured" class="lg:col-span-2"></div>
+          <div id="scienceSide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="scienceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
+      <!-- health -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Health</h2>
+          <a href="./Html/News.html?category=health" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="healthFeatured" class="lg:col-span-2"></div>
+          <div id="healthSide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="healthGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
+
+      
+
+      <!-- Travel -->
+      <div class="mt-10">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Travel</h2>
+          <a href="./Html/News.html?category=travel" class="text-blue-500 font-semibold hover:underline">
+            More →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div id="travelFeatured" class="lg:col-span-2"></div>
+          <div id="travelSide" class="flex flex-col gap-4"></div>
+        </div>
+
+        <div id="travelGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+      </div>
     </div>
 
-    <!-- الأزرق: Cards -->
-    <div class="w-full md:w-1/4 bg-blue-200 p-4">
+    <!-- Cards blue -->
+    <div class="w-full md:w-1/4 bg-gray-100 p-4">
       <div id="cardsContainer"
         class="flex flex-col md:flex-col gap-4 overflow-x-visible md:overflow-x-auto overflow-y-visible md:overflow-y-hidden whitespace-normal md:whitespace-nowrap scrollbar-hide">
         <!-- Weather card-->
@@ -167,18 +390,18 @@
         </div>
 
 
-        
+
         <!-- <div class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"> -->
-          <div id="LiveServer">
-            <div id="liveMatchesContainer" class="flex gap-4 flex-wrap">
-            <!-- هنا هتظهر كل الـ Cards تلقائيًا من JS -->
+        <div id="LiveServer">
+          <div id="liveMatchesContainer" class="flex gap-4 flex-wrap">
+            <!-- cards 3:  live -->
           </div>
-          </div>
+        </div>
         <!-- </div> -->
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script type="module" src="./script.js"></script>
 </body>
 
