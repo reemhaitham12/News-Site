@@ -13,7 +13,7 @@ export const API = {
     },
     news:{
         url:"https://api.thenewsapi.com/v1/news",
-        key:"XNqxkOKQW0V4UINIHbQnsip3k6GWkVeIWnFS8d9x"
+        key:"JU9LbRT4wXa3aPThaHHou2YoClJVtiqhVuQHGMHt"
     }
 }
 
@@ -37,3 +37,4 @@ export const API = {
 // opUQ0AdjLObuKSOfJChLejp7rKf7ko1bh1hGIi8a
 // RBcdJO0J0qzNAnKzgQBH4g4HPAjSuvJ3ixy887hI
 // XNqxkOKQW0V4UINIHbQnsip3k6GWkVeIWnFS8d9x
+// JU9LbRT4wXa3aPThaHHou2YoClJVtiqhVuQHGMHt
