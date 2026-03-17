@@ -34,28 +34,37 @@ if (newsBtn && newsMenu) {
 getWeather("Cairo");
 
 // Rate Dollar
+
 function updateConversion() {
-  const amount = amountInput?.value || 1;
+  const amount = amountInput?.value?.trim();
+
+  if (!amount) {
+    if (convertedAmountEl) {
+      convertedAmountEl.textContent = "0";
+    }
+    return;
+  }
+
   const baseCurrency = currencySelect?.value || "USD";
 
   if (convertedAmountEl) {
     convertedAmountEl.textContent = convertCurrency(amount, baseCurrency);
   }
-
-  if (usdRateEl) usdRateEl.textContent = convertCurrency(amount, "USD");
-  if (sarRateEl) sarRateEl.textContent = convertCurrency(amount, "SAR");
 }
 
 function updateExchangeRates() {
-  if (usdRateEl) usdRateEl.textContent = ratesData.USD.toFixed(2);
-  if (sarRateEl) sarRateEl.textContent = ratesData.SAR.toFixed(2);
-  if (egpRateEl) egpRateEl.textContent = ratesData.EGP.toFixed(2);
+  if (usdRateEl) usdRateEl.textContent = convertCurrency(1, "USD");
+  if (sarRateEl) sarRateEl.textContent = convertCurrency(1, "SAR");
+  if (egpRateEl) egpRateEl.textContent = "1.00";
 }
 
 async function initCurrency() {
   await fetchRates();
-  updateConversion();
   updateExchangeRates();
+
+  if (convertedAmountEl) {
+    convertedAmountEl.textContent = "0";
+  }
 }
 
 if (amountInput) amountInput.addEventListener("input", updateConversion);
@@ -120,6 +129,8 @@ async function displayLiveMatches() {
   }
 }
 
+
+// live matches update every minute
 displayLiveMatches();
 setInterval(displayLiveMatches, 60000);
 

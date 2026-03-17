@@ -13,7 +13,7 @@ export const API = {
     },
     news:{
         url:"https://api.thenewsapi.com/v1/news",
-        key:"JU9LbRT4wXa3aPThaHHou2YoClJVtiqhVuQHGMHt"
+        key:"J4W420z1pGbRv8FXLFHyGMvJL6SzQXmmvlwY61XF"
     }
 }
 

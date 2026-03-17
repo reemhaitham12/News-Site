@@ -13,7 +13,7 @@
   <title>News Site</title>
 </head>
 
-<body class="relative">
+<body class="relative bg-gray-100">
   <!-- Navbar -->
   <nav class="bg-gray-900 text-white relative">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
@@ -98,6 +98,7 @@
   <div class=" mx-auto flex flex-col-reverse md:flex-row gap-4">
     <!-- Cards red -->
     <div class="w-full md:w-3/4 bg-gray-100 p-4">
+      <!-- news navbar -->
       <!-- desktop -->
       <div class="nav flex items-center justify-between gap-4">
         <h2 class="font-bold text-black text-3xl">
@@ -109,29 +110,29 @@
             <a href="./Html/News.html?category=all">All</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=world">World</a>
+            <a href="#world">World</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=business">Business</a>
+            <a href="#business">Business</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=technology">Technology</a>
+            <a href="#technology">Technology</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=entertainment">Entertainment</a>
+            <a href="#entertainment">Entertainment</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=sport">Sport</a>
+            <a href="#sport">Sport</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=science">Science</a>
+            <a href="#science">Science</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=health">Health</a>
+            <a href="#health">Health</a>
           </li>
-          
+
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=travel">Travel</a>
+            <a href="#travel">Travel</a>
           </li>
         </ul>
 
@@ -146,36 +147,36 @@
             <a href="./Html/News.html?category=all">All</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=world">World</a>
+            <a href="#world">World</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=business">Business</a>
+            <a href="#business">Business</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=technology">Technology</a>
+            <a href="#technology">Technology</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=entertainment">Entertainment</a>
+            <a href="#entertainment">Entertainment</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=sport">Sport</a>
+            <a href="#sport">Sport</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=science">Science</a>
+            <a href="#science">Science</a>
           </li>
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=health">Health</a>
+            <a href="#health">Health</a>
           </li>
-          
+
           <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=travel">Travel</a>
+            <a href="#travel">Travel</a>
           </li>
         </ul>
       </div>
 
 
       <!-- World -->
-      <div class="mt-10">
+      <div class="mt-10" id="world">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">World</h2>
           <a href="./Html/News.html?category=world" class="text-blue-500 font-semibold hover:underline">
@@ -191,7 +192,7 @@
         <div id="worldGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
       </div>
       <!-- Business -->
-      <div class="mt-10">
+      <div class="mt-10" id="business">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">Business</h2>
           <a href="./Html/News.html?category=business" class="text-blue-500 font-semibold hover:underline">
@@ -207,7 +208,7 @@
         <div id="businessGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
       </div>
       <!-- TECHNOLOGY -->
-      <div class="mt-10">
+      <div class="mt-10" id="technology">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">Technology</h2>
           <a href="./Html/News.html?category=technology" class="text-blue-500 font-semibold hover:underline">
@@ -223,7 +224,7 @@
         <div id="technologyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
       </div>
       <!-- Entertainment -->
-      <div class="mt-10">
+      <div class="mt-10" id="entertainment">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">Entertainment</h2>
           <a href="./Html/News.html?category=entertainment" class="text-blue-500 font-semibold hover:underline">
@@ -239,7 +240,7 @@
         <div id="entertainmentGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
       </div>
       <!-- SPORT -->
-      <div class="mt-10">
+      <div class="mt-10" id="sport">
 
         <!-- title -->
         <div class="flex justify-between items-center mb-6">
@@ -269,7 +270,7 @@
 
 
       <!-- science -->
-      <div class="mt-10">
+      <div class="mt-10" id="science">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">Science</h2>
           <a href="./Html/News.html?category=science" class="text-blue-500 font-semibold hover:underline">
@@ -285,7 +286,7 @@
         <div id="scienceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
       </div>
       <!-- health -->
-      <div class="mt-10">
+      <div class="mt-10" id="health">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">Health</h2>
           <a href="./Html/News.html?category=health" class="text-blue-500 font-semibold hover:underline">
@@ -301,10 +302,10 @@
         <div id="healthGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
       </div>
 
-      
+
 
       <!-- Travel -->
-      <div class="mt-10">
+      <div class="mt-10" id="travel">
         <div class="flex justify-between items-center mb-6">
           <h2 class="text-2xl font-bold">Travel</h2>
           <a href="./Html/News.html?category=travel" class="text-blue-500 font-semibold hover:underline">
