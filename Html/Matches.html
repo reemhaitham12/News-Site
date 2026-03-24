@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="../img/news.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Matches</title>
+  </head>
+  <body>
+    <nav class="bg-gray-900 text-white relative">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="../img/news.png" alt="logo news site" class="w-10 h-10" />
+          <h1 class="font-bold text-lg cursor-pointer">
+            <a href="./index.html">News Site</a>
+          </h1>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="../index.html">Home</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./Html/News.html">News</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Matches</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Table</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#LiveServer"
+              ><i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live</a
+            >
+          </li>
+        </ul>
+
+        <!-- Right Icons -->
+        <div class="flex gap-4 items-center">
+          <!-- Menu Bar for Mobile -->
+          <i
+            class="fa-solid fa-bars cursor-pointer md:hidden text-xl"
+            id="menuBtn"
+          ></i>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
+        <ul class="flex flex-col p-4 gap-3">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="../index.html">Home</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./Html/News.html">News</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Matches</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Table</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#LiveServer"
+              ><i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- from to category -->
+    <section class="max-w-6xl mx-auto px-4 py-6">
+      <div
+        class="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 md:p-6"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <!-- From -->
+          <div>
+            <label
+              for="fromDate"
+              class="block mb-2 text-sm font-medium text-gray-800"
+            >
+              From
+            </label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <i class="fa-regular fa-calendar text-gray-400"></i>
+              </div>
+              <input
+                type="date"
+                id="fromDate"
+                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+              />
+            </div>
+          </div>
+
+          <!-- To -->
+          <div>
+            <label
+              for="toDate"
+              class="block mb-2 text-sm font-medium text-gray-800"
+            >
+              To
+            </label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <i class="fa-regular fa-calendar text-gray-400"></i>
+              </div>
+              <input
+                type="date"
+                id="toDate"
+                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+              />
+            </div>
+          </div>
+
+          <!-- League -->
+          <div>
+            <label
+              for="leagueSelect"
+              class="block mb-2 text-sm font-medium text-gray-800"
+            >
+              League
+            </label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <i class="fa-solid fa-trophy text-gray-400"></i>
+              </div>
+              <select
+                id="leagueSelect"
+                class="block w-full pl-10 pr-3 py-2.5 border border-gray-300 rounded-lg text-sm text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white"
+              >
+                <option value="152" selected>Premier League</option>
+                <option value="302">La Liga</option>
+                <option value="207">Serie A</option>
+                <option value="175">Bundesliga</option>
+                <option value="168">Ligue 1</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Search -->
+          <div class="flex items-end">
+            <button
+              id="searchBtn"
+              class="w-full py-2.5 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition"
+            >
+              Search Matches
+            </button>
+          </div>
+        </div>
+
+        <!-- Status Buttons -->
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-6">
+          <button
+            data-status="ALL"
+            class="filter-btn px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold transition"
+          >
+            All
+          </button>
+
+          <button
+            data-status="FINISHED"
+            class="filter-btn px-4 py-2 rounded-lg bg-gray-100 hover:bg-blue-400 hover:text-white text-gray-800 font-semibold transition"
+          >
+            Finished
+          </button>
+
+          <button
+            data-status="LIVE"
+            class="filter-btn px-4 py-2 rounded-lg bg-gray-100 hover:bg-blue-400 hover:text-white text-gray-800 font-semibold transition"
+          >
+            Live
+          </button>
+
+          <button
+            data-status="UPCOMING"
+            class="filter-btn px-4 py-2 rounded-lg bg-gray-100 hover:bg-blue-400 hover:text-white text-gray-800 font-semibold transition"
+          >
+            Upcoming
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-6xl mx-auto px-4 pb-10">
+      <div id="matchesContainer" class="space-y-8"></div>
+    </section>
+
+    <script type="module" src="../js/fixtures.js"></script>
+  </body>
+</html>

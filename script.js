@@ -2,7 +2,11 @@ import { getWeather } from "./apiKey/weather.js";
 import { fetchRates, convertCurrency, ratesData } from "./apiKey/dollar.js";
 import { fetchLiveMatches, getCurrentlyLiveMatches } from "./apiKey/live.js";
 import { GetNews, shuffleArray } from "./apiKey/news.js";
-import { createFeaturedCard, createSideCard, createGridCard } from "./apiKey/newsCards.js";
+import {
+  createFeaturedCard,
+  createSideCard,
+  createGridCard,
+} from "./js/newsCards.js";
 
 const usdRateEl = document.getElementById("usdRate");
 const sarRateEl = document.getElementById("sarRate");
@@ -85,11 +89,12 @@ async function displayLiveMatches() {
     liveContainer.innerHTML = "";
 
     if (liveMatches.length === 0) {
-      liveContainer.innerHTML = "<p class='text-gray-500'>No live matches right now.</p>";
+      liveContainer.innerHTML =
+        "<p class='text-gray-500'>No live matches right now.</p>";
       return;
     }
 
-    liveMatches.forEach(match => {
+    liveMatches.forEach((match) => {
       const card = document.createElement("div");
 
       card.className =
@@ -125,10 +130,10 @@ async function displayLiveMatches() {
     });
   } catch (err) {
     console.error("Error fetching live matches:", err);
-    liveContainer.innerHTML = "<p class='text-red-500'>Failed to load live matches.</p>";
+    liveContainer.innerHTML =
+      "<p class='text-red-500'>Failed to load live matches.</p>";
   }
 }
-
 
 // live matches update every minute
 displayLiveMatches();
@@ -177,7 +182,8 @@ async function displayCategoryPreview(category, featuredId, sideId, gridId) {
 
     const uniqueArticles = articles.filter(
       (article, index, self) =>
-        index === self.findIndex((a) => a.uuid === article.uuid || a.url === article.url)
+        index ===
+        self.findIndex((a) => a.uuid === article.uuid || a.url === article.url),
     );
 
     const randomArticles = shuffleArray(uniqueArticles);
@@ -207,11 +213,31 @@ async function displayCategoryPreview(category, featuredId, sideId, gridId) {
 }
 
 displayCategoryPreview("world", "worldFeatured", "worldSide", "worldGrid");
-displayCategoryPreview("business", "businessFeatured", "businessSide", "businessGrid");
-displayCategoryPreview("technology", "technologyFeatured", "technologySide", "technologyGrid");
-displayCategoryPreview("entertainment", "entertainmentFeatured", "entertainmentSide", "entertainmentGrid");
+displayCategoryPreview(
+  "business",
+  "businessFeatured",
+  "businessSide",
+  "businessGrid",
+);
+displayCategoryPreview(
+  "technology",
+  "technologyFeatured",
+  "technologySide",
+  "technologyGrid",
+);
+displayCategoryPreview(
+  "entertainment",
+  "entertainmentFeatured",
+  "entertainmentSide",
+  "entertainmentGrid",
+);
 displayCategoryPreview("sport", "featuredNews", "sideNews", "gridNews");
-displayCategoryPreview("science", "scienceFeatured", "scienceSide", "scienceGrid");
+displayCategoryPreview(
+  "science",
+  "scienceFeatured",
+  "scienceSide",
+  "scienceGrid",
+);
 displayCategoryPreview("health", "healthFeatured", "healthSide", "healthGrid");
 displayCategoryPreview("food", "foodFeatured", "foodSide", "foodGrid");
 displayCategoryPreview("travel", "travelFeatured", "travelSide", "travelGrid");

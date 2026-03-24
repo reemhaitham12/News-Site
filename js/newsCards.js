@@ -1,4 +1,4 @@
-import { getValidImage } from "./news.js";
+import { getValidImage } from "../apiKey/news.js";
 
 export function createFeaturedCard(article) {
   return `

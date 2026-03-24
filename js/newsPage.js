@@ -1,4 +1,4 @@
-import { GetNews, paginateArticles, getValidImage, shuffleArray } from "./news.js";
+import { GetNews, paginateArticles, getValidImage, shuffleArray } from "../apiKey/news.js";
 
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category") || "all";

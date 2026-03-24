@@ -1,409 +1,526 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/news.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>News Site</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" type="image/x-icon" href="./img/news.png" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>News Site</title>
-</head>
+  <body class="relative bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-white relative">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="./img/news.png" alt="logo news site" class="w-10 h-10" />
+          <h1 class="font-bold text-lg cursor-pointer">
+            <a href="./index.html">News Site</a>
+          </h1>
+        </div>
 
-<body class="relative bg-gray-100">
-  <!-- Navbar -->
-  <nav class="bg-gray-900 text-white relative">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <!-- Logo -->
-      <div class="flex items-center gap-2">
-        <img src="./img/news.png" alt="logo news site" class="w-10 h-10" />
-        <h1 class="font-bold text-lg cursor-pointer">
-          <a href="./index.html">News Site</a>
-        </h1>
-      </div>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex gap-6">
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="./index.html">Home</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="./Html/News.html">News</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#">Matches</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#">Statices</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#">Table</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#LiveServer"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
-            Live</a>
-        </li>
-      </ul>
-
-      <!-- Right Icons -->
-      <div class="flex gap-4 items-center">
-        <!-- Menu Bar for Mobile -->
-        <i class="fa-solid fa-bars cursor-pointer md:hidden text-xl" id="menuBtn"></i>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
-      <ul class="flex flex-col p-4 gap-3">
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="./index.html">Home</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="./Html/News.html">News</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#">Matches</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#">Statices</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#">Table</a>
-        </li>
-        <li
-          class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-          <a href="#LiveServer"><i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
-            Live</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-
-
-  <div class=" mx-auto flex flex-col-reverse md:flex-row gap-4">
-    <!-- Cards red -->
-    <div class="w-full md:w-3/4 bg-gray-100 p-4">
-      <!-- news navbar -->
-      <!-- desktop -->
-      <div class="nav flex items-center justify-between gap-4">
-        <h2 class="font-bold text-black text-3xl">
-          <a href="./Html/News.html?category=all">News</a>
-        </h2>
-
-        <ul class="hidden md:flex gap-3 text-md font-medium mx-auto flex-wrap">
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=all">All</a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./index.html">Home</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#world">World</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./Html/News.html">News</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#business">Business</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./Html/Matches.html">Matches</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#technology">Technology</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#entertainment">Entertainment</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Table</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#sport">Sport</a>
-          </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#science">Science</a>
-          </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#health">Health</a>
-          </li>
-
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#travel">Travel</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#LiveServer"
+              ><i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live</a
+            >
           </li>
         </ul>
 
-        <div class="flex items-center ml-auto md:hidden">
-          <i class="fa-solid fa-bars cursor-pointer text-xl" id="newsBtn"></i>
+        <!-- Right Icons -->
+        <div class="flex gap-4 items-center">
+          <!-- Menu Bar for Mobile -->
+          <i
+            class="fa-solid fa-bars cursor-pointer md:hidden text-xl"
+            id="menuBtn"
+          ></i>
         </div>
       </div>
+
       <!-- Mobile Menu -->
-      <div class="hidden md:hidden bg-gray-100" id="newsMenu">
-        <ul class="flex flex-col p-4 gap-3 md:justify-center">
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="./Html/News.html?category=all">All</a>
+      <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
+        <ul class="flex flex-col p-4 gap-3">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./index.html">Home</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#world">World</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./Html/News.html">News</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#business">Business</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./Html/Matches.html">Matches</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#technology">Technology</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#entertainment">Entertainment</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Table</a>
           </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#sport">Sport</a>
-          </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#science">Science</a>
-          </li>
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#health">Health</a>
-          </li>
-
-          <li class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
-            <a href="#travel">Travel</a>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#LiveServer"
+              ><i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live</a
+            >
           </li>
         </ul>
       </div>
+    </nav>
 
+    <div class="mx-auto flex flex-col-reverse md:flex-row gap-4">
+      <!-- Cards red -->
+      <div class="w-full md:w-3/4 bg-gray-100 p-4">
+        <!-- news navbar -->
+        <!-- desktop -->
+        <div class="nav flex items-center justify-between gap-4">
+          <h2 class="font-bold text-black text-3xl">
+            <a href="./Html/News.html?category=all">News</a>
+          </h2>
 
-      <!-- World -->
-      <div class="mt-10" id="world">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">World</h2>
-          <a href="./Html/News.html?category=world" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
+          <ul
+            class="hidden md:flex gap-3 text-md font-medium mx-auto flex-wrap"
+          >
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="./Html/News.html?category=all">All</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#world">World</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#business">Business</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#technology">Technology</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#entertainment">Entertainment</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#sport">Sport</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#science">Science</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#health">Health</a>
+            </li>
+
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#travel">Travel</a>
+            </li>
+          </ul>
+
+          <div class="flex items-center ml-auto md:hidden">
+            <i class="fa-solid fa-bars cursor-pointer text-xl" id="newsBtn"></i>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-gray-100" id="newsMenu">
+          <ul class="flex flex-col p-4 gap-3 md:justify-center">
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="./Html/News.html?category=all">All</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#world">World</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#business">Business</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#technology">Technology</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#entertainment">Entertainment</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#sport">Sport</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#science">Science</a>
+            </li>
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#health">Health</a>
+            </li>
+
+            <li
+              class="p-2 font-bold border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+            >
+              <a href="#travel">Travel</a>
+            </li>
+          </ul>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="worldFeatured" class="lg:col-span-2"></div>
-          <div id="worldSide" class="flex flex-col gap-4"></div>
+        <!-- World -->
+        <div class="mt-10" id="world">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">World</h2>
+            <a
+              href="./Html/News.html?category=world"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="worldFeatured" class="lg:col-span-2"></div>
+            <div id="worldSide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="worldGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
+        <!-- Business -->
+        <div class="mt-10" id="business">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Business</h2>
+            <a
+              href="./Html/News.html?category=business"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="businessFeatured" class="lg:col-span-2"></div>
+            <div id="businessSide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="businessGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
+        <!-- TECHNOLOGY -->
+        <div class="mt-10" id="technology">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Technology</h2>
+            <a
+              href="./Html/News.html?category=technology"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="technologyFeatured" class="lg:col-span-2"></div>
+            <div id="technologySide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="technologyGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
+        <!-- Entertainment -->
+        <div class="mt-10" id="entertainment">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Entertainment</h2>
+            <a
+              href="./Html/News.html?category=entertainment"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="entertainmentFeatured" class="lg:col-span-2"></div>
+            <div id="entertainmentSide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="entertainmentGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
+        <!-- SPORT -->
+        <div class="mt-10" id="sport">
+          <!-- title -->
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Sport</h2>
+
+            <a
+              href="./Html/News.html?category=sport"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <!-- news layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Featured News -->
+            <div id="featuredNews" class="lg:col-span-2"></div>
+
+            <!-- Side News -->
+            <div id="sideNews" class="flex flex-col gap-4"></div>
+          </div>
+
+          <!-- Bottom News -->
+          <div
+            id="gridNews"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
         </div>
 
-        <div id="worldGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+        <!-- science -->
+        <div class="mt-10" id="science">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Science</h2>
+            <a
+              href="./Html/News.html?category=science"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="scienceFeatured" class="lg:col-span-2"></div>
+            <div id="scienceSide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="scienceGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
+        <!-- health -->
+        <div class="mt-10" id="health">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Health</h2>
+            <a
+              href="./Html/News.html?category=health"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="healthFeatured" class="lg:col-span-2"></div>
+            <div id="healthSide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="healthGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
+
+        <!-- Travel -->
+        <div class="mt-10" id="travel">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Travel</h2>
+            <a
+              href="./Html/News.html?category=travel"
+              class="text-blue-500 font-semibold hover:underline"
+            >
+              More →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div id="travelFeatured" class="lg:col-span-2"></div>
+            <div id="travelSide" class="flex flex-col gap-4"></div>
+          </div>
+
+          <div
+            id="travelGrid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+          ></div>
+        </div>
       </div>
-      <!-- Business -->
-      <div class="mt-10" id="business">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Business</h2>
-          <a href="./Html/News.html?category=business" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="businessFeatured" class="lg:col-span-2"></div>
-          <div id="businessSide" class="flex flex-col gap-4"></div>
-        </div>
-
-        <div id="businessGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-      </div>
-      <!-- TECHNOLOGY -->
-      <div class="mt-10" id="technology">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Technology</h2>
-          <a href="./Html/News.html?category=technology" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="technologyFeatured" class="lg:col-span-2"></div>
-          <div id="technologySide" class="flex flex-col gap-4"></div>
-        </div>
-
-        <div id="technologyGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-      </div>
-      <!-- Entertainment -->
-      <div class="mt-10" id="entertainment">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Entertainment</h2>
-          <a href="./Html/News.html?category=entertainment" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="entertainmentFeatured" class="lg:col-span-2"></div>
-          <div id="entertainmentSide" class="flex flex-col gap-4"></div>
-        </div>
-
-        <div id="entertainmentGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-      </div>
-      <!-- SPORT -->
-      <div class="mt-10" id="sport">
-
-        <!-- title -->
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Sport</h2>
-
-          <a href="./Html/News.html?category=sport" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
-
-        <!-- news layout -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-          <!-- Featured News -->
-          <div id="featuredNews" class="lg:col-span-2"></div>
-
-          <!-- Side News -->
-          <div id="sideNews" class="flex flex-col gap-4"></div>
-
-        </div>
-
-        <!-- Bottom News -->
-        <div id="gridNews" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        </div>
-
-      </div>
-
-
-      <!-- science -->
-      <div class="mt-10" id="science">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Science</h2>
-          <a href="./Html/News.html?category=science" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="scienceFeatured" class="lg:col-span-2"></div>
-          <div id="scienceSide" class="flex flex-col gap-4"></div>
-        </div>
-
-        <div id="scienceGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-      </div>
-      <!-- health -->
-      <div class="mt-10" id="health">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Health</h2>
-          <a href="./Html/News.html?category=health" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="healthFeatured" class="lg:col-span-2"></div>
-          <div id="healthSide" class="flex flex-col gap-4"></div>
-        </div>
-
-        <div id="healthGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-      </div>
-
-
-
-      <!-- Travel -->
-      <div class="mt-10" id="travel">
-        <div class="flex justify-between items-center mb-6">
-          <h2 class="text-2xl font-bold">Travel</h2>
-          <a href="./Html/News.html?category=travel" class="text-blue-500 font-semibold hover:underline">
-            More →
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div id="travelFeatured" class="lg:col-span-2"></div>
-          <div id="travelSide" class="flex flex-col gap-4"></div>
-        </div>
-
-        <div id="travelGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-      </div>
-    </div>
-
-    <!-- Cards blue -->
-    <div class="w-full md:w-1/4 bg-gray-100 p-4">
-      <div id="cardsContainer"
-        class="flex flex-col md:flex-col gap-4 overflow-x-visible md:overflow-x-auto overflow-y-visible md:overflow-y-hidden whitespace-normal md:whitespace-nowrap scrollbar-hide">
-        <!-- Weather card-->
+      <!-- Cards blue -->
+      <div class="w-full md:w-1/4 bg-gray-100 p-4">
         <div
-          class="card min-w-[180px] h-50 bg-white  rounded-xl shadow-lg flex flex-col justify-between p-4  overflow-hidden">
-          <!-- Header: City & Time -->
-          <div class="flex flex-row justify-between items-center w-full">
-            <h2 id="city" class="text-lg font-semibold truncate"></h2>
-            <p id="time" class="text-md truncate"></p>
-          </div>
+          id="cardsContainer"
+          class="flex flex-col md:flex-col gap-4 overflow-x-visible md:overflow-x-auto overflow-y-visible md:overflow-y-hidden whitespace-normal md:whitespace-nowrap scrollbar-hide"
+        >
+          <!-- Weather card-->
+          <div
+            class="card min-w-[180px] h-50 bg-white rounded-xl shadow-lg flex flex-col justify-between p-4 overflow-hidden"
+          >
+            <!-- Header: City & Time -->
+            <div class="flex flex-row justify-between items-center w-full">
+              <h2 id="city" class="text-lg font-semibold truncate"></h2>
+              <p id="time" class="text-md truncate"></p>
+            </div>
 
-          <!-- Weather Icon -->
-          <div class="flex items-center justify-center my-2">
-            <img id="weatherIcon" class="w-16 h-16" src="" alt="weather icon" />
-          </div>
+            <!-- Weather Icon -->
+            <div class="flex items-center justify-center my-2">
+              <img
+                id="weatherIcon"
+                class="w-16 h-16"
+                src=""
+                alt="weather icon"
+              />
+            </div>
 
-          <!-- Weather Description & Temp -->
-          <div class="flex flex-col items-center">
-            <p id="temp" class="text-3xl font-bold mt-2"></p>
-            <p id="weatherDesc" class="text-sm mt-1 capitalize truncate">
+            <!-- Weather Description & Temp -->
+            <div class="flex flex-col items-center">
+              <p id="temp" class="text-3xl font-bold mt-2"></p>
+              <p id="weatherDesc" class="text-sm mt-1 capitalize truncate"></p>
+            </div>
 
-            </p>
-          </div>
-
-          <!-- Footer: AQI & Temp Range -->
-          <div class="flex justify-between text-xs mt-2 w-full">
-            <p id="aqi" class="truncate"></p>
-            <p id="tempRange" class="truncate"></p>
-          </div>
-        </div>
-
-        <!-- Card 2: Dollar & SAR -->
-        <div class="card min-w-[240px] h-auto bg-white rounded-xl shadow-lg flex flex-col p-4 gap-4">
-          <h2 class="font-semibold text-lg">Currency Exchange</h2>
-
-          <!-- Current Rates -->
-          <div class="flex justify-center text-md gap-4">
-            <p>USD: <span id="usdRate">-</span></p>
-            <p>SAR: <span id="sarRate">-</span></p>
-            <p>EGP: <span id="egpRate">-</span></p>
-          </div>
-
-          <!-- Currency Converter Card -->
-          <div class="max-w-sm mx-auto bg-white shadow-lg rounded-2xl p-6 border border-gray-200">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Currency Converter</h2>
-
-            <div class="flex flex-col gap-4">
-              <!-- Input Amount -->
-              <input type="number" id="amountInput" placeholder="Enter amount"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-gray-700 font-medium">
-
-              <!-- Currency Select -->
-              <select id="currencySelect"
-                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-gray-700 font-medium">
-                <option value="USD">USD</option>
-                <option value="SAR">SAR</option>
-              </select>
-
-              <!-- Converted Result -->
-              <p class="text-gray-800 font-semibold text-lg text-center">
-                = <span id="convertedAmount" class="text-blue-600">0</span> EGP
-              </p>
+            <!-- Footer: AQI & Temp Range -->
+            <div class="flex justify-between text-xs mt-2 w-full">
+              <p id="aqi" class="truncate"></p>
+              <p id="tempRange" class="truncate"></p>
             </div>
           </div>
-        </div>
 
+          <!-- Card 2: Dollar & SAR -->
+          <div
+            class="card min-w-[240px] h-auto bg-white rounded-xl shadow-lg flex flex-col p-4 gap-4"
+          >
+            <h2 class="font-semibold text-lg">Currency Exchange</h2>
 
+            <!-- Current Rates -->
+            <div class="flex justify-center text-md gap-4">
+              <p>USD: <span id="usdRate">-</span></p>
+              <p>SAR: <span id="sarRate">-</span></p>
+              <p>EGP: <span id="egpRate">-</span></p>
+            </div>
 
-        <!-- <div class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"> -->
-        <div id="LiveServer">
-          <div id="liveMatchesContainer" class="flex gap-4 flex-wrap">
-            <!-- cards 3:  live -->
+            <!-- Currency Converter Card -->
+            <div
+              class="max-w-sm mx-auto bg-white shadow-lg rounded-2xl p-6 border border-gray-200"
+            >
+              <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">
+                Currency Converter
+              </h2>
+
+              <div class="flex flex-col gap-4">
+                <!-- Input Amount -->
+                <input
+                  type="number"
+                  id="amountInput"
+                  placeholder="Enter amount"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-gray-700 font-medium"
+                />
+
+                <!-- Currency Select -->
+                <select
+                  id="currencySelect"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 text-gray-700 font-medium"
+                >
+                  <option value="USD">USD</option>
+                  <option value="SAR">SAR</option>
+                </select>
+
+                <!-- Converted Result -->
+                <p class="text-gray-800 font-semibold text-lg text-center">
+                  =
+                  <span id="convertedAmount" class="text-blue-600">0</span> EGP
+                </p>
+              </div>
+            </div>
           </div>
+
+          <!-- <div class="card min-w-[180px] h-48 bg-white rounded-xl shadow-lg flex items-center justify-center p-4"> -->
+          <div id="LiveServer">
+            <div id="liveMatchesContainer" class="flex gap-4 flex-wrap">
+              <!-- cards 3:  live -->
+            </div>
+          </div>
+          <!-- </div> -->
         </div>
-        <!-- </div> -->
       </div>
     </div>
-  </div>
 
-  <script type="module" src="./script.js"></script>
-</body>
-
+    <script type="module" src="./script.js"></script>
+  </body>
 </html>

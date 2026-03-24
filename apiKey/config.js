@@ -1,27 +1,31 @@
 export const API = {
-    weather: {
-        url: "https://api.openweathermap.org/data/2.5/weather",
-        key: "216d45082bcf831d717b1d8a7e7184f6"
-    },
-    dollar: {
-        url: "https://v6.exchangerate-api.com",
-        key: "5451fc9b1c7bc3c2ebcf8556",
-    },
-    live:{
-        url:"https://apiv2.allsportsapi.com/football",
-        key: "53fb799a93057a56ea22caac7d58ce780351576d7eee3a93353282d5e9a8375d"
-    },
-    news:{
-        url:"https://api.thenewsapi.com/v1/news",
-        key:"J4W420z1pGbRv8FXLFHyGMvJL6SzQXmmvlwY61XF"
-    }
-}
+  weather: {
+    url: "https://api.openweathermap.org/data/2.5/weather",
+    key: "216d45082bcf831d717b1d8a7e7184f6",
+  },
+  dollar: {
+    url: "https://v6.exchangerate-api.com",
+    key: "5451fc9b1c7bc3c2ebcf8556",
+  },
+  live: {
+    url: "https://apiv2.allsportsapi.com/football",
+    key: "53fb799a93057a56ea22caac7d58ce780351576d7eee3a93353282d5e9a8375d",
+  },
+  news: {
+    url: "https://api.thenewsapi.com/v1/news",
+    key: "J4W420z1pGbRv8FXLFHyGMvJL6SzQXmmvlwY61XF",
+  },
+  matches: {
+    url: "https://apiv2.allsportsapi.com/football",
+    key: "d06b01f4040b2788b7a5d40ead118862593039e94879f56ccb92b8940da3f00f",
+  },
+};
 
+
+// d06b01f4040b2788b7a5d40ead118862593039e94879f56ccb92b8940da3f00f
 // dollar
 //  url:"https://v6.exchangerate-api.com/v6",
 // key:"5451fc9b1c7bc3c2ebcf8556"
-
-
 
 // sport api
 // 53fb799a93057a56ea22caac7d58ce780351576d7eee3a93353282d5e9a8375d
@@ -38,3 +42,6 @@ export const API = {
 // RBcdJO0J0qzNAnKzgQBH4g4HPAjSuvJ3ixy887hI
 // XNqxkOKQW0V4UINIHbQnsip3k6GWkVeIWnFS8d9x
 // JU9LbRT4wXa3aPThaHHou2YoClJVtiqhVuQHGMHt
+
+// matches key
+// /?met=Fixtures&APIkey=!_your_account_APIkey_!&from=2021-05-18&to=2021-05-18
