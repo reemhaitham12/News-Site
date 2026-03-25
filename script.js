@@ -76,23 +76,44 @@ if (currencySelect) currencySelect.addEventListener("change", updateConversion);
 
 initCurrency();
 
-// live
 const liveContainer = document.getElementById("liveMatchesContainer");
+const liveIndicator = document.getElementById("liveIndicator");
+
+function updateLiveIndicator(hasLiveMatches) {
+  if (!liveIndicator) return;
+
+  if (hasLiveMatches) {
+    liveIndicator.classList.remove("text-gray-500");
+    liveIndicator.classList.add("text-red-600", "animate-blink-scale");
+  } else {
+    liveIndicator.classList.remove("text-red-600", "animate-blink-scale");
+    liveIndicator.classList.add("text-gray-500");
+  }
+}
 
 async function displayLiveMatches() {
   if (!liveContainer) return;
 
   try {
     const matches = await fetchLiveMatches();
-    const liveMatches = await getCurrentlyLiveMatches(matches);
+    const liveMatches = getCurrentlyLiveMatches(matches);
+
+    console.log("liveMatches:", liveMatches);
 
     liveContainer.innerHTML = "";
 
-    if (liveMatches.length === 0) {
-      liveContainer.innerHTML =
-        "<p class='text-gray-500'>No live matches right now.</p>";
+    if (!liveMatches || liveMatches.length === 0) {
+      updateLiveIndicator(false);
+
+      liveContainer.innerHTML = `
+        <p class="text-gray-500 text-center py-4">
+          No live matches right now.
+        </p>
+      `;
       return;
     }
+
+    updateLiveIndicator(true);
 
     liveMatches.forEach((match) => {
       const card = document.createElement("div");
@@ -130,12 +151,16 @@ async function displayLiveMatches() {
     });
   } catch (err) {
     console.error("Error fetching live matches:", err);
-    liveContainer.innerHTML =
-      "<p class='text-red-500'>Failed to load live matches.</p>";
+    updateLiveIndicator(false);
+
+    liveContainer.innerHTML = `
+      <p class="text-red-500 text-center py-4">
+        Failed to load live matches.
+      </p>
+    `;
   }
 }
 
-// live matches update every minute
 displayLiveMatches();
 setInterval(displayLiveMatches, 60000);
 

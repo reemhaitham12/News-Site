@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="../img/news.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Statistics</title>
+  </head>
+
+  <body class="bg-gray-50">
+    <nav class="bg-gray-900 text-white relative">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center gap-2">
+          <img src="../img/news.png" alt="logo news site" class="w-10 h-10" />
+          <h1 class="font-bold text-lg cursor-pointer">
+            <a href="../index.html">News Site</a>
+          </h1>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-6">
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./News.html">News</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./fixtures.html">Matches</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-blue-500 bg-blue-500 rounded-lg">
+            <a href="./Statistics.html">Statistics</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./table.html">Table</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="../index.html#LiveServer">
+              <i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
+              Live
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex gap-4 items-center">
+          <i
+            class="fa-solid fa-bars cursor-pointer md:hidden text-xl"
+            id="menuBtn"
+          ></i>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
+        <ul class="flex flex-col p-4 gap-3">
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./News.html">News</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./Matches.html">Matches</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-blue-500 bg-blue-500 rounded-lg">
+            <a href="./Statistics.html">Statistics</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="./table.html">Table</a>
+          </li>
+
+          <li class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg">
+            <a href="../index.html#LiveServer">
+              <i class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"></i>
+              Live
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="max-w-7xl mx-auto px-4 pt-8 pb-4">
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 md:p-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h1 id="statisticsTitle" class="text-2xl md:text-3xl font-bold text-gray-900">
+              Premier League Statistics
+            </h1>
+            <p class="text-sm text-gray-500 mt-2">
+              Top scorers and player statistics
+            </p>
+          </div>
+
+          <div class="w-full md:w-64">
+            <label for="leagueSelect" class="block mb-2 text-sm font-medium text-gray-700">
+              Choose League
+            </label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <i class="fa-solid fa-trophy text-gray-400"></i>
+              </div>
+              <select
+                id="leagueSelect"
+                class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+              >
+                <option value="152" selected>Premier League</option>
+                <option value="302">La Liga</option>
+                <option value="207">Serie A</option>
+                <option value="175">Bundesliga</option>
+                <option value="168">Ligue 1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Buttons -->
+        <div class="flex justify-center mt-6">
+          <div class="flex flex-wrap justify-center gap-3">
+            <button
+              id="topScorersBtn"
+              class="px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold transition"
+            >
+              Top Scorers
+            </button>
+
+            <button
+              id="playersBtn"
+              class="px-5 py-2.5 rounded-lg bg-gray-100 text-gray-800 hover:bg-blue-400 hover:text-white font-semibold transition"
+            >
+              Players
+            </button>
+          </div>
+        </div>
+
+        <!-- Sort -->
+        <div class="flex justify-center mt-6">
+          <div class="w-full md:w-72">
+            <label
+              for="sortSelect"
+              class="block mb-2 text-sm font-medium text-gray-700 text-center"
+            >
+              Sort By
+            </label>
+            <select
+              id="sortSelect"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            >
+              <option value="goals">Goals</option>
+              <option value="yellowCards">Yellow Cards</option>
+              <option value="redCards">Red Cards</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="max-w-7xl mx-auto px-4 pb-10">
+      <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm text-left text-gray-700">
+            <thead class="bg-gray-50 text-gray-900 text-sm uppercase whitespace-nowrap">
+              <tr>
+                <th class="px-4 py-4">#</th>
+                <th class="px-4 py-4">Photo</th>
+                <th class="px-4 py-4">Player</th>
+                <th class="px-4 py-4">Team Logo</th>
+                <th class="px-4 py-4">Team</th>
+                <th class="px-4 py-4">Goals</th>
+                <th class="px-4 py-4">Yellow</th>
+                <th class="px-4 py-4">Red</th>
+              </tr>
+            </thead>
+
+            <tbody id="statisticsTableBody" class="divide-y divide-gray-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="../js/statisticsPage.js"></script>
+
+    
+  </body>
+</html>

@@ -1,5 +1,12 @@
 import { getStandings } from "../apiKey/standings.js";
+const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
 
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
 const standingsTableBody = document.getElementById("standingsTableBody");
 const leagueSelect = document.getElementById("leagueSelect");
 const leagueTitle = document.getElementById("leagueTitle");
