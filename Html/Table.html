@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="../img/news.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>League Table</title>
+  </head>
+
+  <body class="bg-gray-50">
+    <nav class="bg-gray-900 text-white relative">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <div class="flex items-center gap-2">
+          <img src="../img/news.png" alt="logo news site" class="w-10 h-10" />
+          <h1 class="font-bold text-lg cursor-pointer">
+            <a href="../index.html">News Site</a>
+          </h1>
+        </div>
+
+        <ul class="hidden md:flex gap-6">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="../index.html">Home</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./News.html">News</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./fixtures.html">Matches</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-blue-500 bg-blue-500 rounded-lg"
+          >
+            <a href="./table.html">Table</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#LiveServer">
+              <i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex gap-4 items-center">
+          <i
+            class="fa-solid fa-bars cursor-pointer md:hidden text-xl"
+            id="menuBtn"
+          ></i>
+        </div>
+      </div>
+
+      <div class="hidden md:hidden bg-gray-900" id="mobileMenu">
+        <ul class="flex flex-col p-4 gap-3">
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="../index.html">Home</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./News.html">News</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="./fixtures.html">Matches</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#">Statices</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-blue-500 bg-blue-500 rounded-lg"
+          >
+            <a href="./table.html">Table</a>
+          </li>
+          <li
+            class="p-2 font-bold cursor-pointer border border-transparent hover:border-blue-500 hover:bg-blue-400 hover:rounded-lg"
+          >
+            <a href="#LiveServer">
+              <i
+                class="fa-solid fa-circle text-xs text-red-600 animate-blink-scale"
+              ></i>
+              Live
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header + League Select -->
+    <section class="max-w-7xl mx-auto px-4 pt-8 pb-4">
+      <div
+        class="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 md:p-6"
+      >
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+        >
+          <div>
+            <h1
+              id="leagueTitle"
+              class="text-2xl md:text-3xl font-bold text-gray-900"
+            >
+              Premier League Standings
+            </h1>
+            <p class="text-sm text-gray-500 mt-2">Current league table</p>
+          </div>
+
+          <div class="w-full md:w-64">
+            <label
+              for="leagueSelect"
+              class="block mb-2 text-sm font-medium text-gray-700"
+            >
+              Choose League
+            </label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <i class="fa-solid fa-trophy text-gray-400"></i>
+              </div>
+              <select
+                id="leagueSelect"
+                class="w-full border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+              >
+                <option value="152" selected>Premier League</option>
+                <option value="302">La Liga</option>
+                <option value="207">Serie A</option>
+                <option value="175">Bundesliga</option>
+                <option value="168">Ligue 1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div
+          class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 text-sm text-gray-700"
+        >
+          <p><span class="font-bold text-gray-900">P</span> = Played</p>
+          <p><span class="font-bold text-gray-900">W</span> = Wins</p>
+          <p><span class="font-bold text-gray-900">D</span> = Draws</p>
+          <p><span class="font-bold text-gray-900">L</span> = Losses</p>
+          <p><span class="font-bold text-gray-900">GF</span> = Goals For</p>
+          <p><span class="font-bold text-gray-900">GA</span> = Goals Against</p>
+          <p>
+            <span class="font-bold text-gray-900">GD</span> = Goal Difference
+          </p>
+          <p><span class="font-bold text-gray-900">PTS</span> = Points</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="max-w-7xl mx-auto px-4 pb-10">
+      <div
+        class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden"
+      >
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left text-gray-700">
+            <thead class="bg-gray-50 text-gray-900 text-sm uppercase">
+              <tr>
+                <th class="px-4 py-4">#</th>
+                <th class="px-4 py-4">Logo</th>
+                <th class="px-4 py-4">Team</th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>P</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Played = Number of matches played
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>W</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Wins = Number of matches won
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>D</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Draws = Number of drawn matches
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>L</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Losses = Number of lost matches
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>GF</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Goals For = Goals scored
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>GA</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Goals Against = Goals conceded
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>GD</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Goal Difference = GF - GA
+                    </div>
+                  </div>
+                </th>
+
+                <th class="px-4 py-4">
+                  <div class="relative group w-fit cursor-pointer">
+                    <span>PTS</span>
+                    <div
+                      class="absolute left-1/2 top-full z-20 mt-2 hidden -translate-x-1/2 rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white shadow-lg group-hover:block normal-case whitespace-nowrap"
+                    >
+                      Points = Total points
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody
+              id="standingsTableBody"
+              class="divide-y divide-gray-200"
+            ></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="../js/table.js"></script>
+  </body>
+</html>
